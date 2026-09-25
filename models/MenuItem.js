@@ -4,4 +4,4 @@ exports.getMenuByRestaurant = (restaurantId) => {
 };
 exports.getMenuItemById = (id) => {
  return db.oneOrNone('SELECT * FROM menu_items WHERE id = $1', [id]);
-}
+};
