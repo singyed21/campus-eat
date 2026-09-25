@@ -30,23 +30,16 @@ campus-eat/
 └── package.json
 ```
 campus-eats/
-├── config/
-│   └── db.js
-├── controllers/
-│   ├── homeController.js      (Controller — pages)
-│   ├── aboutController.js
-│   ├── menuController.js
-│   ├── orderController.js
-│   └── apiController.js       (Controller — JSON API, new)
-├── models/
-│   ├── Restaurant.js          (unchanged — reused by both Controllers)
-│   ├── MenuItem.js            (unchanged — reused by both Controllers)
-│   └── Order.js               (unchanged — reused by both Controllers)
-├── routes/
-│   ├── index.js               (Routing — page routes)
-│   └── api.js                 (Routing — /api/* JSON routes, new)
-├── views/
 ├── public/
-├── app.js                     (now mounts both routers, plus express.json())
+│   ├── css/
+│   │   └── styles.css         (adds .order-lookup, .lookup-box, #lookupResult)
+│   └── js/
+│       └── orderLookup.js     (new — fetch() calling /api/orders/:id)
+├── views/
+│   └── index.ejs              (adds the Check an Order section)
+├── controllers/
+│   └── apiController.js       (unchanged from Lab 5)
+├── routes/
+│   └── api.js                 (unchanged from Lab 5)
 └── ...
 
